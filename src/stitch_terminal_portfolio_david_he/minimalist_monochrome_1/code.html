@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#fbf9f8","on-secondary-fixed":"#1a1c1c","secondary":"#5d5f5f","inverse-surface":"#303030","on-secondary-fixed-variant":"#454747","surface-container-high":"#eae8e7","error":"#ba1a1a","on-tertiary-fixed-variant":"#474747","background":"#fbf9f8","tertiary":"#000000","on-tertiary-container":"#848484","on-primary-fixed":"#1b1b1b","inverse-primary":"#c6c6c6","secondary-container":"#dfe0e0","tertiary-container":"#1b1b1b","on-primary-container":"#848484","secondary-fixed-dim":"#c6c6c7","on-error":"#ffffff","primary":"#000000","surface-bright":"#fbf9f8","secondary-fixed":"#e2e2e2","surface-container":"#efeded","outline-variant":"#cfc4c5","surface-tint":"#5e5e5e","surface-container-low":"#f5f3f3","on-tertiary":"#ffffff","surface-dim":"#dbd9d9","on-surface":"#1b1c1c","tertiary-fixed-dim":"#c6c6c6","on-primary":"#ffffff","on-tertiary-fixed":"#1b1b1b","primary-fixed":"#e2e2e2","on-error-container":"#93000a","on-background":"#1b1c1c","inverse-on-surface":"#f2f0f0","surface-variant":"#e4e2e2","on-surface-variant":"#4c4546","on-primary-fixed-variant":"#474747","surface-container-lowest":"#ffffff","outline":"#7e7576","on-secondary-container":"#616363","primary-container":"#1b1b1b","surface-container-highest":"#e4e2e2","primary-fixed-dim":"#c6c6c6","on-secondary":"#ffffff","error-container":"#ffdad6","tertiary-fixed":"#e2e2e2"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"rule-bold":"4px","unit-3xl":"6rem","unit-xs":"0.5rem","gutter-mobile":"1rem","unit-xl":"2.5rem","unit-2xs":"0.25rem","rule-ultra":"8px","unit-2xl":"4rem","unit-sm":"0.75rem","margin-desktop":"4rem","unit-md":"1rem","gutter-desktop":"2rem","rule-hairline":"1px","margin-mobile":"1.25rem","unit-void":"10rem","unit-lg":"1.5rem"},"fontFamily":{"label-mono":["JetBrains Mono"],"headline-xl-mobile":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"headline-lg":["Playfair Display"],"display-hero":["Playfair Display"],"headline-xl":["Playfair Display"],"caption":["\"Source Serif 4\""],"headline-sm":["Playfair Display"],"label-caps":["JetBrains Mono"],"display-hero-mobile":["Playfair Display"],"body-sm":["\"Source Serif 4\""],"body-base":["\"Source Serif 4\""],"body-lg":["\"Source Serif 4\""]},"fontSize":{"label-mono":["12px",{"lineHeight":"18px","letterSpacing":"0.04em","fontWeight":"400"}],"headline-xl-mobile":["38px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"display-hero":["112px",{"lineHeight":"104px","letterSpacing":"-0.04em","fontWeight":"400"}],"headline-xl":["64px",{"lineHeight":"68px","letterSpacing":"-0.025em","fontWeight":"400"}],"caption":["11px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"0","fontWeight":"400"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.14em","fontWeight":"500"}],"display-hero-mobile":["56px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0","fontWeight":"400"}],"body-base":["15px",{"lineHeight":"24px","letterSpacing":"0","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-base text-body-base text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface border-b-[4px] border-primary"><div class="h-20 w-full px-gutter-desktop mx-auto flex items-center justify-between"><div class="flex items-baseline gap-unit-md"><span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">HE DAYONG // 何大勇 [ARCHITECTURAL FOLIO]</span><span class="hidden lg:inline-block font-label-mono text-label-mono text-secondary">MONOGRAPH // 2025 EDITION</span></div><nav class="hidden xl:flex items-center gap-unit-xl" data-active-classes="border-b-2 border-primary text-primary font-bold"><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors duration-100 py-unit-xs" data-path="index" href="#">[01] INDEX / 首页</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors duration-100 py-unit-xs" data-path="works-research" href="#">[02] WORKS &amp; RESEARCH / 转型研究与作品</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors duration-100 py-unit-xs" data-path="about-profile" href="#">[03] ABOUT &amp; PROFILE / 核心履历与思考</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors duration-100 py-unit-xs" data-path="contact" href="#">[04] CONTACT / 联络渠道</a></nav><div class="flex items-center gap-unit-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary text-on-primary font-label-caps text-label-caps uppercase px-unit-md py-unit-xs border border-primary hover:bg-surface hover:text-primary transition-colors duration-100" data-path="direct-inquiry" href="#">[ DIRECT INQUIRY / 建立联络 → ]</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 01: ARCHITECTURAL DOSSIER HEADER -->
+<section class="w-full px-gutter-desktop mx-auto pt-unit-xl pb-unit-lg">
+<div class="flex flex-col gap-unit-xs">
+<div class="flex flex-wrap items-center justify-between gap-unit-sm pb-unit-xs">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">[FOLIO SECTION 03 // ARCHITECTURAL DOSSIER &amp; CURRICULUM VITAE]</span>
+<span class="font-label-mono text-label-mono text-secondary">DOC_REF: HDY-CV-2025.SPEC // REVISION 4.1</span>
+</div>
+<div class="w-full h-[4px] bg-primary"></div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-desktop pt-unit-md pb-unit-sm">
+<div class="xl:col-span-8 flex flex-col justify-between">
+<h1 class="font-display-hero text-[52px] md:text-[84px] lg:text-[104px] leading-[0.95] tracking-[-0.035em] text-primary">
+            DISCIPLINE OF SOVEREIGN CERTAINTY. <span class="italic font-normal">何大勇.</span>
+</h1>
+<p class="font-label-mono text-label-mono uppercase text-secondary tracking-widest pt-unit-sm">
+            ARCHITECT OF FINANCIAL SYSTEMS // EX-BCG PRINCIPAL // PARTNER IN ENTERPRISE FINTECH TRANSFORMATION
+          </p>
+</div>
+<div class="xl:col-span-4 flex flex-col justify-between pt-unit-xs xl:pt-0">
+<div class="flex flex-col gap-unit-2xs">
+<span class="font-label-caps text-label-caps text-secondary">POSITIONING / CLASSIFICATION</span>
+<p class="font-body-base text-body-base text-on-surface">
+              Twenty-two years synthesizing deterministic systems theory, macroprudential banking mandates, and sovereign generative orchestration.
+            </p>
+</div>
+<div class="pt-unit-md flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between font-label-mono text-label-mono text-secondary pb-unit-2xs">
+<span>LAT: 31.2304° N</span>
+<span>GRID: 12-AXIS</span>
+<span>SEC: PUBLIC/TIER-1</span>
+</div>
+<a class="w-full inline-flex items-center justify-between bg-primary text-on-primary font-label-caps text-label-caps uppercase px-unit-md py-unit-sm hover:bg-surface hover:text-primary transition-colors duration-100" href="#download" onclick="alert('Monograph CV dossier HDY-CV-2025.SPEC package initialized for direct verification.')">
+<span>[ DOWNLOAD COMPLETE MONOGRAPH CV (PDF) ↓ ]</span>
+<span class="font-label-mono text-label-mono">14.8 MB</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full h-[1px] bg-outline-variant"></div>
+</div>
+</section>
+<!-- SECTION 02: SPLIT DOSSIER & CAREER CHRONOLOGY PLATE -->
+<section class="w-full px-gutter-desktop mx-auto py-unit-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- LEFT COLUMN: EXECUTIVE NARRATIVE & METRIC MATRIX -->
+<div class="lg:col-span-6 flex flex-col gap-unit-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">[PLATE 03-A // EXECUTIVE SYNOPSIS &amp; SOVEREIGN CLEARANCE]</span>
+<span class="font-label-mono text-label-mono text-secondary">SECTION INDEX: 03.1</span>
+</div>
+<!-- Drop Cap Narrative Block -->
+<div class="flex flex-col gap-unit-md">
+<div class="flex items-start gap-unit-md">
+<div class="w-14 h-14 bg-primary text-on-primary flex items-center justify-center font-display-hero text-[36px] flex-shrink-0">
+              S
+            </div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              overeign financial infrastructure cannot afford theoretical approximations. Over two decades spanning top-tier international management consultancies and national banking enterprises, David He (何大勇) has spearheaded structural migrations for balance sheets exceeding $3.2 Trillion, establishing fault-tolerant distributed cores, real-economy asset digitization pipelines, and institutional multi-agent cognition layers.
+            </p>
+</div>
+<p class="font-body-base text-body-base text-on-surface leading-relaxed">
+            As former Principal at Boston Consulting Group (BCG) and chief digital transformation leader for sovereign-tier banking entities, his work reconciles strict regulatory compliance with next-generation autonomous computation. His designs address not merely algorithmic capability, but deterministic operational resilience, macroprudential audit chains, and the fundamental decoupling of monolithic ledger structures.
+          </p>
+</div>
+<!-- Architectural Image Plate -->
+<div class="w-full bg-surface-container-low p-unit-xs">
+<div class="relative w-full h-64 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Monochrome architectural portrait of David He in an austere minimalist high-ceiling pavilion in Beijing with stark natural light, deep black shadows, clean geometric lines, professional bespoke tailored suit, looking with intense focus, editorial black and white luxury monograph style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpBvb0xq-D4ZIjzT4v48iQLnpKOBrRLJE62APgUj9yTlNh1qKFsXSBdO2DEdsYwZhcnSQxkAi6CljuE0FlErzKyZy-T8yVP9DpghFvwQRpA3o_nN-vVqeNzGdjvmiLQ1LwvhJpUuq5Pte_-ToUIiB53wsHgxDddynHd12j4K6twGT1f_yBa9AW4uA2W8AJT1hqTg6Uf7xEkW4r7-m774ymFj_aqlhVXQRiPyjJb2O3MB5uxkTgTHIt"/>
+<div class="absolute bottom-0 left-0 right-0 p-unit-xs bg-surface/90 flex items-center justify-between">
+<span class="font-caption text-caption text-secondary italic">PLATE FIG 3.1: ARCHITECTURAL PORTRAIT // CITADEL OF COMMERCE, SHANGHAI</span>
+<span class="font-label-mono text-label-mono text-primary">#REF-DH-8802</span>
+</div>
+</div>
+</div>
+<!-- Strategic Competency Matrix -->
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-baseline justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">Strategic Competency Matrix</h3>
+<span class="font-label-mono text-label-mono text-secondary">EVALUATION METRIC // 2025</span>
+</div>
+<div class="w-full bg-surface-container-lowest">
+<!-- Row 1 -->
+<div class="p-unit-sm bg-surface hover:bg-surface-container-low transition-colors duration-100 flex flex-col md:flex-row md:items-center justify-between gap-unit-xs">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary">01 // STRATEGIC INFRASTRUCTURE ARCHITECTURE</span>
+<span class="font-caption text-caption text-secondary">National clearing engine alignment, mainframe decoupling, ledger federation</span>
+</div>
+<div class="flex items-center gap-unit-md text-right">
+<span class="font-label-mono text-label-mono font-bold text-primary">99th PERCENTILE</span>
+<span class="font-label-caps text-label-caps px-unit-xs py-unit-2xs bg-secondary-fixed text-primary">SOVEREIGN CLEARANCE</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-unit-sm bg-surface hover:bg-surface-container-low transition-colors duration-100 flex flex-col md:flex-row md:items-center justify-between gap-unit-xs">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary">02 // GENERATIVE AGENTICS &amp; LLM INGESTION</span>
+<span class="font-caption text-caption text-secondary">Private state model orchestration, automated compliance audit vectors</span>
+</div>
+<div class="flex items-center gap-unit-md text-right">
+<span class="font-label-mono text-label-mono font-bold text-primary">95th PERCENTILE</span>
+<span class="font-label-caps text-label-caps px-unit-xs py-unit-2xs bg-secondary-fixed text-primary">PROD DEPLOYMENT</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="p-unit-sm bg-surface hover:bg-surface-container-low transition-colors duration-100 flex flex-col md:flex-row md:items-center justify-between gap-unit-xs">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary">03 // CORE BANKING 2035 HORIZON ROADMAP</span>
+<span class="font-caption text-caption text-secondary">State-owned banking blueprints, distributed fault isolation, zero-loss fallback</span>
+</div>
+<div class="flex items-center gap-unit-md text-right">
+<span class="font-label-mono text-label-mono font-bold text-primary">98th PERCENTILE</span>
+<span class="font-label-caps text-label-caps px-unit-xs py-unit-2xs bg-secondary-fixed text-primary">MACROPRUDENTIAL ALIGN</span>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="p-unit-sm bg-surface hover:bg-surface-container-low transition-colors duration-100 flex flex-col md:flex-row md:items-center justify-between gap-unit-xs">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary">04 // INDUSTRIAL SUPPLY-CHAIN FABRICS</span>
+<span class="font-caption text-caption text-secondary">Hardware-attested warehouse telemetry, real-economy collateral pipelines</span>
+</div>
+<div class="flex items-center gap-unit-md text-right">
+<span class="font-label-mono text-label-mono font-bold text-primary">94th PERCENTILE</span>
+<span class="font-label-caps text-label-caps px-unit-xs py-unit-2xs bg-secondary-fixed text-primary">DEEP PENETRATION</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: CAREER CHRONOLOGY MONOGRAPH PLATE -->
+<div class="lg:col-span-6 flex flex-col justify-between bg-surface-container-low p-unit-md md:p-unit-lg">
+<div class="flex flex-col gap-unit-lg">
+<div class="flex items-center justify-between pb-unit-xs">
+<span class="font-label-caps text-label-caps text-primary font-bold tracking-widest">[CHRONOLOGY OF STRATEGIC PRACTICE // 2010—2025]</span>
+<span class="font-label-mono text-label-mono text-secondary">ERA: CONTEMPORARY</span>
+</div>
+<!-- Chronology Item 1 -->
+<div class="p-unit-md bg-surface flex flex-col gap-unit-xs hover:bg-surface-container transition-colors duration-100">
+<div class="flex flex-wrap items-center justify-between gap-unit-xs">
+<span class="font-label-mono text-label-mono text-primary font-bold">[2020 – PRESENT]</span>
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-unit-xs py-unit-2xs">PHASE 03: AGENTIC FRONTIER</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary pt-unit-2xs">
+              Generative AI &amp; Autonomous Financial Agents
+            </h4>
+<p class="font-label-mono text-label-mono text-secondary uppercase">
+              Partner &amp; Chief Enterprise Architect // Institutional Strategy Lead
+            </p>
+<p class="font-body-base text-body-base text-on-surface pt-unit-xs leading-relaxed">
+              Architected sovereign-grade private model agent orchestrators across China's leading state-owned banking institutions. Reduced institutional audit review latency by 74% while preserving zero-leakage compliance boundaries. Pioneered multi-agent consensus protocols for real-time commercial risk modeling under PBOC regulatory guidance.
+            </p>
+<div class="flex flex-wrap gap-unit-xs pt-unit-xs">
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#MULTI-AGENT-SYSTEMS</span>
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#SOVEREIGN-LLM-CORE</span>
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#AUDIT-COMPRESSION</span>
+</div>
+</div>
+<!-- Chronology Item 2 -->
+<div class="p-unit-md bg-surface flex flex-col gap-unit-xs hover:bg-surface-container transition-colors duration-100">
+<div class="flex flex-wrap items-center justify-between gap-unit-xs">
+<span class="font-label-mono text-label-mono text-primary font-bold">[2015 – 2020]</span>
+<span class="font-label-caps text-label-caps bg-secondary text-on-secondary px-unit-xs py-unit-2xs">PHASE 02: ASSET FABRICS</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary pt-unit-2xs">
+              Industrial Fintech &amp; Deep Tier-N Supply Chain
+            </h4>
+<p class="font-label-mono text-label-mono text-secondary uppercase">
+              Managing Director &amp; Head of Industrial Financial Technologies
+            </p>
+<p class="font-body-base text-body-base text-on-surface pt-unit-xs leading-relaxed">
+              Conceptualized and deployed IoT-attested industrial financing architecture connecting Tier-N manufacturing tiers directly to interbank liquidity. Enabled verifiable asset verification yielding over $40B+ GMV in verified underlying claims across automotive, heavy equipment, and bulk energy trading corridors.
+            </p>
+<div class="flex flex-wrap gap-unit-xs pt-unit-xs">
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#IOT-TELEMETRY-TRUST</span>
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#TIER-N-SETTLEMENT</span>
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#ASSET-DIGITIZATION</span>
+</div>
+</div>
+<!-- Chronology Item 3 -->
+<div class="p-unit-md bg-surface flex flex-col gap-unit-xs hover:bg-surface-container transition-colors duration-100">
+<div class="flex flex-wrap items-center justify-between gap-unit-xs">
+<span class="font-label-mono text-label-mono text-primary font-bold">[2010 – 2015]</span>
+<span class="font-label-caps text-label-caps bg-secondary-fixed-dim text-on-surface px-unit-xs py-unit-2xs">PHASE 01: MONOLITH COLLAPSE</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary pt-unit-2xs">
+              Core Banking Monolith Decoupling &amp; Distributed Settlement
+            </h4>
+<p class="font-label-mono text-label-mono text-secondary uppercase">
+              Principal Architect // Ex-BCG Technology Advantage Practice
+            </p>
+<p class="font-body-base text-body-base text-on-surface pt-unit-xs leading-relaxed">
+              Served as lead transformation architect steering migration off legacy mainframe monoliths to distributed active-active core frameworks. Established zero-downtime ledger reconciliation protocols governing over 120 million active retail accounts across national banking networks.
+            </p>
+<div class="flex flex-wrap gap-unit-xs pt-unit-xs">
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#MAINFRAME-DECOUPLING</span>
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#ACTIVE-ACTIVE-CONSENSUS</span>
+<span class="font-label-mono text-label-mono bg-surface-container-high px-unit-xs py-unit-2xs text-secondary">#BCG-PRINCIPAL</span>
+</div>
+</div>
+</div>
+<div class="pt-unit-md flex items-center justify-between text-secondary font-label-mono text-caption">
+<span>MONO-ID: 2025-ARCH-CHRONO</span>
+<span>SYSTEM CADENCE: CONTINUOUS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: INVERTED PHILOSOPHY & AXIOM GALLERY (ALL-BLACK SURFACES) -->
+<section class="w-full bg-primary text-on-primary py-unit-2xl my-unit-lg">
+<div class="w-full px-gutter-desktop mx-auto flex flex-col gap-unit-xl">
+<!-- Inverted Header -->
+<div class="flex flex-col gap-unit-xs">
+<div class="flex flex-wrap items-center justify-between gap-unit-sm text-secondary-fixed-dim">
+<span class="font-label-caps text-label-caps uppercase tracking-widest">[PLATE 03-B // ARCHITECTURAL DOGMA &amp; SYSTEMIC PHILOSOPHY]</span>
+<span class="font-label-mono text-label-mono">FOUNDATIONAL AXIOMS // CANON 2025</span>
+</div>
+<div class="w-full h-[1px] bg-secondary"></div>
+</div>
+<!-- Axiom Display Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Axiom I -->
+<div class="flex flex-col justify-between p-unit-lg bg-surface-container-highest/10 min-h-[340px]">
+<div class="flex flex-col gap-unit-md">
+<span class="font-label-mono text-label-mono text-secondary-fixed-dim">AXIOM I // STRUCTURAL ORDER</span>
+<blockquote class="font-headline-sm text-headline-sm italic text-on-primary leading-snug">
+              “Modularity without structural alignment is merely distributed latency.”
+            </blockquote>
+</div>
+<p class="font-body-sm text-body-sm text-secondary-fixed pt-unit-md">
+            Decoupling microservices or micro-frontends without a macroprudential blueprint produces cascading operational friction. Scale requires radical architectural determinism.
+          </p>
+</div>
+<!-- Axiom II -->
+<div class="flex flex-col justify-between p-unit-lg bg-surface-container-highest/10 min-h-[340px]">
+<div class="flex flex-col gap-unit-md">
+<span class="font-label-mono text-label-mono text-secondary-fixed-dim">AXIOM II // COMPUTATIONAL INGESTION</span>
+<blockquote class="font-headline-sm text-headline-sm italic text-on-primary leading-snug">
+              “Financial AI agents cannot be treated as peripheral widgets; they will ingest the database abstraction layer itself.”
+            </blockquote>
+</div>
+<p class="font-body-sm text-body-sm text-secondary-fixed pt-unit-md">
+            Chatbots are trivialities. The genuine transformative frontier is autonomous agents acting as the query optimizer, validation harness, and sovereign transaction driver.
+          </p>
+</div>
+<!-- Axiom III -->
+<div class="flex flex-col justify-between p-unit-lg bg-surface-container-highest/10 min-h-[340px]">
+<div class="flex flex-col gap-unit-md">
+<span class="font-label-mono text-label-mono text-secondary-fixed-dim">AXIOM III // INSTITUTIONAL RELIABILITY</span>
+<blockquote class="font-headline-sm text-headline-sm italic text-on-primary leading-snug">
+              “True enterprise agility is rooted in deterministic reliability at institutional scale.”
+            </blockquote>
+</div>
+<p class="font-body-sm text-body-sm text-secondary-fixed pt-unit-md">
+            Speed derived from fragile compromises creates catastrophic systemic debt. Agility is the consequence of rigorously engineered architectural invariants.
+          </p>
+</div>
+</div>
+<!-- Extended Philosophical Annotation -->
+<div class="p-unit-lg bg-surface-container-highest/5 flex flex-col md:flex-row items-start justify-between gap-unit-lg">
+<div class="max-w-3xl flex flex-col gap-unit-xs">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed">MACROPRUDENTIAL AUDITABILITY &amp; AGENT GOVERNANCE</span>
+<p class="font-body-base text-body-base text-secondary-fixed leading-relaxed">
+            In our 2025 doctrine, autonomous financial models operate under cryptographically signed trace-envelopes. Every heuristic inference that translates into capital movement, liquidity redistribution, or loan authorization must be explainable in linear algebraic proof down to the parameter checkpoint.
+          </p>
+</div>
+<div class="flex flex-col gap-unit-2xs text-right font-label-mono text-label-mono text-secondary-fixed-dim">
+<span>GOVERNANCE PROTOCOL: P-982</span>
+<span>COMPLIANCE VECTOR: PBOC-SOV-2025</span>
+<span>VALIDATION: RIGID</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04: CURATED ACADEMIC & WHITEPAPER BIBLIOGRAPHY -->
+<section class="w-full px-gutter-desktop mx-auto py-unit-xl">
+<div class="flex flex-col gap-unit-lg">
+<div class="flex flex-col gap-unit-xs">
+<div class="flex flex-wrap items-center justify-between gap-unit-sm">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">[CURATED ACADEMIC &amp; WHITEPAPER BIBLIOGRAPHY]</span>
+<span class="font-label-mono text-label-mono text-secondary">ARCHIVAL REGISTRY // FOUR ESSENTIAL VOLUMES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+          Published Inquiries &amp; System Treatises
+        </h2>
+<div class="w-full h-[4px] bg-primary mt-unit-2xs"></div>
+</div>
+<!-- 4-Column Structured Table -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter-desktop">
+<!-- Paper 01 -->
+<div class="flex flex-col justify-between p-unit-md bg-surface-container-low hover:bg-surface-container transition-colors duration-100 min-h-[380px]">
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-primary font-bold">ITEM 01</span>
+<span class="font-label-caps text-label-caps text-secondary">DEC 2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">
+              《银行2035：认知智能与重构架构》
+            </h3>
+<span class="font-label-mono text-label-mono text-secondary">
+              MONOGRAPH // 14,200 WORDS
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface pt-unit-xs leading-normal">
+              An exhaustive projection on multi-agent execution engines supplanting standard transaction pipelines in sovereign banking frameworks.
+            </p>
+</div>
+<div class="pt-unit-md">
+<a class="inline-flex items-center justify-between w-full py-unit-xs font-label-caps text-label-caps text-primary hover:text-secondary transition-colors" href="#paper-01" onclick="alert('Accessing Archival Vault for Paper 01: Monograph Dec 2024.')">
+<span>[ READ WHITE PAPER → ]</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Paper 02 -->
+<div class="flex flex-col justify-between p-unit-md bg-surface-container-low hover:bg-surface-container transition-colors duration-100 min-h-[380px]">
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-primary font-bold">ITEM 02</span>
+<span class="font-label-caps text-label-caps text-secondary">JUN 2022</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">
+              《产业数字金融白皮书：场景互联与生态共生》
+            </h3>
+<span class="font-label-mono text-label-mono text-secondary">
+              INDUSTRY BENCHMARK REPORT
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface pt-unit-xs leading-normal">
+              Comprehensive telemetry-to-ledger blueprint standardizing industrial IoT data inputs for institutional risk rating engines.
+            </p>
+</div>
+<div class="pt-unit-md">
+<a class="inline-flex items-center justify-between w-full py-unit-xs font-label-caps text-label-caps text-primary hover:text-secondary transition-colors" href="#paper-02" onclick="alert('Accessing Archival Vault for Paper 02: Industrial Fintech 2022.')">
+<span>[ READ WHITE PAPER → ]</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Paper 03 -->
+<div class="flex flex-col justify-between p-unit-md bg-surface-container-low hover:bg-surface-container transition-colors duration-100 min-h-[380px]">
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-primary font-bold">ITEM 03</span>
+<span class="font-label-caps text-label-caps text-secondary">OCT 2018</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">
+              《分布式核心业务系统设计准则》
+            </h3>
+<span class="font-label-mono text-label-mono text-secondary">
+              CORE ARCHITECTURE TREATISE
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface pt-unit-xs leading-normal">
+              Foundational axioms for legacy core isolation, consensus guarantees, and dual-run state consistency without customer disruption.
+            </p>
+</div>
+<div class="pt-unit-md">
+<a class="inline-flex items-center justify-between w-full py-unit-xs font-label-caps text-label-caps text-primary hover:text-secondary transition-colors" href="#paper-03" onclick="alert('Accessing Archival Vault for Paper 03: Distributed Core 2018.')">
+<span>[ READ WHITE PAPER → ]</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Paper 04 -->
+<div class="flex flex-col justify-between p-unit-md bg-surface-container-low hover:bg-surface-container transition-colors duration-100 min-h-[380px]">
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-primary font-bold">ITEM 04</span>
+<span class="font-label-caps text-label-caps text-secondary">Q1 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">
+              《多智能体金融决策主权白皮书》
+            </h3>
+<span class="font-label-mono text-label-mono text-secondary">
+              WORKING DRAFT // IN REVIEW
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface pt-unit-xs leading-normal">
+              Defining boundary parameters, deterministic rollback thresholds, and legal enforceability for autonomous banking micro-agents.
+            </p>
+</div>
+<div class="pt-unit-md">
+<a class="inline-flex items-center justify-between w-full py-unit-xs font-label-caps text-label-caps text-primary hover:text-secondary transition-colors" href="#paper-04" onclick="alert('Accessing Archival Vault for Paper 04: Sovereign Agentics Q1 2025.')">
+<span>[ READ WHITE PAPER → ]</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Colophon Signature Strip -->
+<div class="mt-unit-lg p-unit-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-md">
+<span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold">COLOPHON AUTHENTICATION</span>
+<span class="font-label-mono text-label-mono text-secondary">ALL ENTRIES ATTESTED BY THE SENIOR ENTERPRISE ARCHITECT ARCHIVE</span>
+</div>
+</div>
+<div class="flex items-center gap-unit-sm">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-unit-md py-unit-xs hover:bg-surface hover:text-primary transition-colors duration-100" href="#contact" onclick="alert('Navigating to Direct Inquiry Protocol for Senior Architect He Dayong.')">
+            [ INITIATE INQUIRY // 建立联络 ]
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface border-t-[4px] border-primary mt-unit-2xl"><div class="w-full px-gutter-desktop mx-auto py-unit-2xl grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop"><div class="flex flex-col gap-unit-xs"><div class="font-label-caps text-label-caps uppercase text-primary font-bold">ARCHIVAL REGISTER</div><p class="font-label-mono text-label-mono text-secondary">MONO-CAT-2025-ARCH-0098</p><p class="font-label-mono text-label-mono text-secondary">SYSTEM CLASSIFICATION: FINTECH INFRASTRUCTURE &amp; STRATEGY</p></div><div class="flex flex-col gap-unit-xs"><div class="font-label-caps text-label-caps uppercase text-primary font-bold">CARTOGRAPHIC ANCHOR</div><p class="font-label-mono text-label-mono text-secondary">LAT: 31.2304° N // LNG: 121.4737° E</p><p class="font-label-mono text-label-mono text-secondary">GRID REF: 12-COL / SWISS REFINED</p></div><div class="flex flex-col gap-unit-xs"><div class="font-label-caps text-label-caps uppercase text-primary font-bold">SPECIFICATION</div><p class="font-label-mono text-label-mono text-secondary">TYPESET: PLAYFAIR DISPLAY &amp; JETBRAINS MONO</p><p class="font-label-mono text-label-mono text-secondary">SUBSTRATE: MONOCHROMATIC COTTON EMULATION</p></div><div class="flex flex-col gap-unit-xs"><div class="font-label-caps text-label-caps uppercase text-primary font-bold">CURATORIAL RIGHTS</div><p class="font-label-mono text-label-mono text-secondary">© 2025 DAVID HE (何大勇). ALL ARCHIVAL RIGHTS RESERVED.</p><p class="font-label-mono text-label-mono text-secondary">SENIOR ENTERPRISE ARCHITECT FOLIO</p></div></div><div class="w-full border-t border-secondary-fixed py-unit-xs px-gutter-desktop flex items-center justify-between"><span class="font-label-mono text-label-mono text-secondary">PLATE NO. // SEC-GLOBAL-01</span><span class="font-label-mono text-label-mono text-secondary">DOCUMENT REF: DH-FINTECH-TRANSFORMATION</span></div></footer></body></html>

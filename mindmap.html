@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人网站构建 · 脑图</title>
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --line: #7eb6e8;
+        --root-bg: #3b82c4;
+        --root-text: #ffffff;
+        --node-bg: #ffffff;
+        --page: #f7f9fc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(ellipse at 20% 40%, #e8f2fc 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 20%, #eef4fa 0%, transparent 45%),
+          var(--page);
+      }
+
+      .wrap {
+        padding: 48px 32px 64px;
+        overflow-x: auto;
+      }
+
+      .map {
+        display: grid;
+        grid-template-columns: auto 28px 1fr;
+        align-items: center;
+        min-width: 920px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .root {
+        justify-self: end;
+        padding: 14px 22px;
+        border-radius: 10px;
+        background: var(--root-bg);
+        color: var(--root-text);
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        box-shadow: 0 6px 18px rgba(59, 130, 196, 0.28);
+        white-space: nowrap;
+      }
+
+      .spine {
+        position: relative;
+        align-self: stretch;
+        width: 28px;
+      }
+
+      .spine::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 14px;
+        height: 2px;
+        background: var(--line);
+        transform: translateY(-50%);
+      }
+
+      .spine::after {
+        content: "";
+        position: absolute;
+        left: 14px;
+        top: 8%;
+        bottom: 8%;
+        width: 2px;
+        background: var(--line);
+      }
+
+      .branches {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 8px 0;
+      }
+
+      .branch {
+        display: grid;
+        grid-template-columns: 18px minmax(120px, auto) 20px 1fr;
+        align-items: center;
+        animation: rise 0.55s ease both;
+      }
+
+      .branch:nth-child(1) { animation-delay: 0.05s; }
+      .branch:nth-child(2) { animation-delay: 0.1s; }
+      .branch:nth-child(3) { animation-delay: 0.15s; }
+      .branch:nth-child(4) { animation-delay: 0.2s; }
+      .branch:nth-child(5) { animation-delay: 0.25s; }
+      .branch:nth-child(6) { animation-delay: 0.3s; }
+
+      .elbow {
+        position: relative;
+        height: 100%;
+        min-height: 28px;
+      }
+
+      .elbow::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 18px;
+        height: 2px;
+        background: var(--line);
+        transform: translateY(-50%);
+      }
+
+      .topic {
+        padding: 8px 14px;
+        border: 1.5px solid var(--line);
+        border-radius: 8px;
+        background: var(--node-bg);
+        font-weight: 600;
+        font-size: 0.98rem;
+        white-space: nowrap;
+        box-shadow: 0 2px 8px rgba(59, 130, 196, 0.08);
+      }
+
+      .bridge {
+        position: relative;
+        height: 2px;
+        background: var(--line);
+        align-self: center;
+      }
+
+      .leaves {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+        padding-left: 0;
+      }
+
+      .leaves.has-many::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 14px;
+        bottom: 14px;
+        width: 2px;
+        background: var(--line);
+      }
+
+      .leaf {
+        display: grid;
+        grid-template-columns: 16px 1fr;
+        align-items: center;
+        animation: rise 0.45s ease both;
+      }
+
+      .leaf-line {
+        position: relative;
+        height: 2px;
+        background: var(--line);
+      }
+
+      .leaf-text {
+        padding: 6px 12px;
+        border: 1px solid #c5daf0;
+        border-radius: 7px;
+        background: #fff;
+        font-size: 0.92rem;
+        line-height: 1.4;
+      }
+
+      .hint {
+        color: #6b7280;
+        font-weight: 400;
+      }
+
+      .empty {
+        color: #9ca3af;
+        font-style: italic;
+        font-size: 0.88rem;
+        padding-left: 8px;
+      }
+
+      .note {
+        max-width: 1100px;
+        margin: 28px auto 0;
+        padding: 0 8px;
+        color: #6b7280;
+        font-size: 0.85rem;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateX(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (max-width: 720px) {
+        .wrap {
+          padding: 24px 12px 40px;
+        }
+
+        .map {
+          min-width: 0;
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .root {
+          justify-self: start;
+        }
+
+        .spine {
+          display: none;
+        }
+
+        .branch {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .elbow,
+        .bridge {
+          display: none;
+        }
+
+        .leaves.has-many::before {
+          display: none;
+        }
+
+        .leaf {
+          grid-template-columns: 1fr;
+        }
+
+        .leaf-line {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="map" role="img" aria-label="个人网站构建脑图">
+        <div class="root">个人网站构建</div>
+        <div class="spine" aria-hidden="true"></div>
+        <div class="branches">
+          <div class="branch">
+            <div class="elbow" aria-hidden="true"></div>
+            <div class="topic">整体信息</div>
+            <div class="bridge" aria-hidden="true"></div>
+            <div class="leaves has-many">
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">
+                  网站类型
+                  <span class="hint">（个人主页 / 博客 / 电商）</span>
+                </div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">
+                  核心目的
+                  <span class="hint">（展示作品 / 卖东西）</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="branch">
+            <div class="elbow" aria-hidden="true"></div>
+            <div class="topic">页面结构</div>
+            <div class="bridge" aria-hidden="true"></div>
+            <div class="leaves has-many">
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">首页</div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">XX页</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="branch">
+            <div class="elbow" aria-hidden="true"></div>
+            <div class="topic">导航与跳转</div>
+            <div class="bridge" aria-hidden="true"></div>
+            <div class="leaves has-many">
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">导航栏位置</div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">导航项</div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">跳转方式</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="branch">
+            <div class="elbow" aria-hidden="true"></div>
+            <div class="topic">视觉风格</div>
+            <div class="bridge" aria-hidden="true"></div>
+            <div class="leaves">
+              <div class="empty">（待补充）</div>
+            </div>
+          </div>
+
+          <div class="branch">
+            <div class="elbow" aria-hidden="true"></div>
+            <div class="topic">配色方案</div>
+            <div class="bridge" aria-hidden="true"></div>
+            <div class="leaves has-many">
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">
+                  主色
+                  <span class="hint">（背景色）</span>
+                </div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">
+                  强调色
+                  <span class="hint">（按钮、链接）</span>
+                </div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">文字色</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="branch">
+            <div class="elbow" aria-hidden="true"></div>
+            <div class="topic">交互效果</div>
+            <div class="bridge" aria-hidden="true"></div>
+            <div class="leaves has-many">
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">页面切换效果</div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">滚动效果</div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">鼠标效果</div>
+              </div>
+              <div class="leaf">
+                <div class="leaf-line" aria-hidden="true"></div>
+                <div class="leaf-text">加载效果</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        文件位置：项目根目录 <code>mindmap.html</code> · 用浏览器直接打开即可查看
+      </p>
+    </div>
+  </body>
+</html>
