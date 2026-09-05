@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from '../components/Reveal'
 
 const mandateOptions = [
   { value: 'digital-transform', label: '银行数字化转型 / CBOT 体系咨询交流' },
@@ -27,9 +28,9 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       <section className="w-full page-gutter pt-unit-xl pb-unit-2xl border-b-[8px] border-primary">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-unit-md mb-unit-lg pb-unit-sm border-b border-primary">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-unit-md mb-unit-lg pb-unit-sm border-b border-primary rule-draw">
           <span className="text-label-caps tracking-widest text-primary flex items-center gap-unit-xs">
-            <span className="inline-block w-2.5 h-2.5 bg-primary" />
+            <span className="inline-block w-2.5 h-2.5 bg-primary pulse-dot" />
             [章节 04 // 专业联络]
           </span>
           <div className="flex items-center gap-unit-md text-label-mono text-secondary flex-wrap">
@@ -39,7 +40,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-baseline">
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 hero-stagger">
             <h1 className="text-display-hero text-primary tracking-tight font-normal mb-unit-md">
               直接联络。
               <br />
@@ -49,8 +50,8 @@ export default function ContactPage() {
               本页为课程项目演示 · 正式业务请通过 BCG 官方渠道联络
             </p>
           </div>
-          <div className="lg:col-span-4 flex flex-col justify-between self-stretch pt-unit-md lg:pt-0 lg:border-l-[4px] lg:border-primary lg:pl-gutter-desktop">
-            <div className="bg-primary text-on-primary p-unit-md">
+          <div className="lg:col-span-4 flex flex-col justify-between self-stretch pt-unit-md lg:pt-0 lg:border-l-[4px] lg:border-primary lg:pl-gutter-desktop hero-stagger">
+            <div className="bg-primary text-on-primary p-unit-md lift-hover">
               <div className="text-label-caps tracking-widest text-secondary-container mb-unit-2xs flex items-center gap-2">
                 <span className="inline-block w-2 h-2 bg-surface" />
                 官方简介
@@ -72,8 +73,8 @@ export default function ContactPage() {
 
       <section className="w-full page-gutter py-unit-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
-          <div className="lg:col-span-5 flex flex-col gap-unit-xl">
-            <div className="border-[4px] border-primary p-unit-lg bg-surface relative">
+          <Reveal className="lg:col-span-5 flex flex-col gap-unit-xl">
+            <div className="border-[4px] border-primary p-unit-lg bg-surface relative lift-hover">
               <div className="absolute -top-3 left-unit-md bg-surface px-unit-xs text-label-caps text-primary border border-primary font-bold">
                 板块 04-A // 公开档案
               </div>
@@ -145,7 +146,7 @@ export default function ContactPage() {
               </a>
             </div>
 
-            <div className="border border-primary p-unit-md bg-surface-container-lowest">
+            <div className="border border-primary p-unit-md bg-surface-container-lowest lift-hover">
               <div className="flex items-center justify-between mb-unit-xs">
                 <span className="text-label-caps text-primary font-bold">关注焦点</span>
                 <span className="text-label-mono text-caption text-secondary">公开主题</span>
@@ -168,9 +169,9 @@ export default function ContactPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-7 flex flex-col">
+          <Reveal delay={100} className="lg:col-span-7 flex flex-col">
             <div className="border-[4px] border-primary p-unit-lg lg:p-unit-xl bg-surface flex flex-col h-full">
               <div className="border-b-[4px] border-primary pb-unit-sm mb-unit-lg flex items-baseline justify-between gap-unit-sm">
                 <div>
@@ -322,12 +323,12 @@ export default function ContactPage() {
                 </div>
               )}
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="w-full page-gutter pb-unit-2xl">
-        <div className="border-t-[4px] border-primary pt-unit-lg">
+        <Reveal delay={80} className="border-t-[4px] border-primary pt-unit-lg">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
             <div className="md:col-span-4 flex flex-col gap-unit-2xs">
               <div className="text-label-caps text-primary font-bold flex items-center gap-1">
@@ -358,7 +359,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </div>
   )

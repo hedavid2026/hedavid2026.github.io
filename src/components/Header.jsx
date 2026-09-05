@@ -12,7 +12,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-surface border-b-[4px] border-primary">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-surface/92 border-b-[4px] border-primary backdrop-blur-[2px]">
       <div className="h-20 w-full page-gutter mx-auto flex items-center justify-between gap-unit-md">
         <Link to="/" className="flex items-baseline gap-unit-md min-w-0">
           <span className="text-label-caps text-primary tracking-widest truncate">

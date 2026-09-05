@@ -1,3 +1,5 @@
+import Reveal from '../components/Reveal'
+
 const pillars = [
   {
     plate: '板块 01.A',
@@ -184,10 +186,10 @@ export default function WorksPage() {
   return (
     <div className="flex flex-col w-full">
       <section className="w-full page-gutter pt-unit-xl pb-unit-2xl">
-        <div className="flex flex-col gap-unit-md border-b-[4px] border-primary pb-unit-xl">
+        <Reveal className="flex flex-col gap-unit-md border-b-[4px] border-primary pb-unit-xl">
           <div className="flex flex-wrap items-center justify-between gap-unit-sm">
             <div className="flex items-center gap-unit-xs">
-              <span className="inline-block w-2 h-2 bg-primary" />
+              <span className="inline-block w-2 h-2 bg-primary pulse-dot" />
               <span className="text-label-caps text-primary">
                 [章节 02 // 研究主题与公开成果 2020—2025]
               </span>
@@ -204,7 +206,7 @@ export default function WorksPage() {
               </p>
             </div>
             <div className="lg:col-span-4">
-              <div className="border border-primary p-unit-md bg-surface flex flex-col gap-unit-2xs">
+              <div className="border border-primary p-unit-md bg-surface flex flex-col gap-unit-2xs lift-hover">
                 <span className="text-label-caps text-secondary">索引摘要 // 近五年公开焦点</span>
                 <div className="text-headline-sm text-primary">5 大研究支柱</div>
                 <div className="text-label-mono text-on-surface-variant">
@@ -215,15 +217,15 @@ export default function WorksPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="w-full page-gutter pb-unit-3xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop items-stretch">
-          {pillars.map((pillar) => (
+          {pillars.map((pillar, i) => (
+            <Reveal key={pillar.ref} delay={(i % 2) * 90 + Math.floor(i / 2) * 60} as="div" className="h-full">
             <article
-              key={pillar.ref}
-              className="border border-primary border-t-[4px] flex flex-col justify-between bg-surface p-unit-lg"
+              className="border border-primary border-t-[4px] flex flex-col justify-between bg-surface/90 p-unit-lg h-full lift-hover"
             >
               <div className="flex flex-col gap-unit-lg">
                 <div className="flex flex-col gap-unit-2xs border-b border-primary/20 pb-unit-sm">
@@ -285,14 +287,18 @@ export default function WorksPage() {
                 </div>
               </div>
             </article>
+            </Reveal>
           ))}
         </div>
+        <Reveal delay={200}>
         <p className="text-caption text-secondary mt-unit-md">
           * 手机银行 AUM、财富增速、新质生产力企业数量、消金增速与规模等数据，来自何大勇公开演讲及证券时报、中国日报网、证券日报等对 BCG 报告的报道，仅供主题索引，非独立审计结论。消费金融板块主要依据 2023 年《守正创新，行稳致远——消费金融“智胜”之道》报告发布相关公开报道整理。
         </p>
+        </Reveal>
       </section>
 
       <section className="w-full page-gutter pb-unit-3xl">
+        <Reveal delay={80}>
         <div className="bg-primary text-on-primary p-unit-xl border-t-[8px] border-secondary-fixed">
           <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-on-primary/20 pb-unit-md gap-unit-sm">
             <div>
@@ -364,6 +370,7 @@ export default function WorksPage() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
     </div>
   )

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Reveal from '../components/Reveal'
 
 const indexRows = [
   {
@@ -31,16 +32,16 @@ export default function IndexPage() {
   return (
     <div className="flex flex-col w-full">
       <section className="w-full page-gutter pt-unit-xl pb-unit-void border-b-[8px] border-primary min-h-[calc(100vh-5rem)] flex flex-col justify-center">
-        <div className="flex flex-wrap items-center justify-between gap-unit-sm mb-unit-lg pb-unit-sm border-b border-primary">
+        <div className="flex flex-wrap items-center justify-between gap-unit-sm mb-unit-lg pb-unit-sm border-b border-primary rule-draw">
           <span className="text-label-caps text-primary tracking-widest flex items-center gap-unit-xs">
-            <span className="inline-block w-2.5 h-2.5 bg-primary" />
+            <span className="inline-block w-2.5 h-2.5 bg-primary pulse-dot" />
             [章节 01 // 档案索引]
           </span>
           <span className="text-label-mono text-secondary">BCG 专家 · 北京</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end">
-          <div className="lg:col-span-9">
+          <div className="lg:col-span-9 hero-stagger">
             <p className="text-label-mono text-secondary tracking-widest mb-unit-md">
               波士顿咨询公司 · 董事总经理、全球资深合伙人
             </p>
@@ -54,16 +55,16 @@ export default function IndexPage() {
               AI 与智能体银行。
             </p>
           </div>
-          <div className="lg:col-span-3 flex flex-col gap-unit-sm lg:border-l-[4px] lg:border-primary lg:pl-gutter-desktop">
+          <div className="lg:col-span-3 flex flex-col gap-unit-sm lg:border-l-[4px] lg:border-primary lg:pl-gutter-desktop hero-stagger">
             <Link
               to="/works"
-              className="w-full text-center bg-primary text-on-primary text-label-caps py-unit-sm border border-primary hover:bg-surface hover:text-primary transition-arch"
+              className="w-full text-center bg-primary text-on-primary text-label-caps py-unit-sm border border-primary hover:bg-surface hover:text-primary transition-arch lift-hover"
             >
               [ 查看研究 → ]
             </Link>
             <Link
               to="/about"
-              className="w-full text-center bg-surface text-primary text-label-caps py-unit-sm border border-primary hover:bg-primary hover:text-on-primary transition-arch"
+              className="w-full text-center bg-surface text-primary text-label-caps py-unit-sm border border-primary hover:bg-primary hover:text-on-primary transition-arch lift-hover"
             >
               [ 阅读履历 ]
             </Link>
@@ -72,25 +73,26 @@ export default function IndexPage() {
       </section>
 
       <section className="w-full page-gutter py-unit-2xl">
-        <div className="flex items-center justify-between mb-unit-lg flex-wrap gap-unit-sm">
+        <Reveal className="flex items-center justify-between mb-unit-lg flex-wrap gap-unit-sm">
           <h2 className="text-headline-lg text-primary">章节目录</h2>
           <span className="text-label-mono text-secondary">共 4 个板块 · 基于公开资料</span>
-        </div>
+        </Reveal>
         <div className="border-t border-outline-variant">
-          {indexRows.map((row) => (
-            <Link
-              key={row.code}
-              to={row.to}
-              className="group flex flex-col sm:flex-row sm:items-center justify-between gap-unit-xs py-unit-lg border-b border-outline-variant hover:bg-primary hover:text-on-primary transition-arch px-unit-sm -mx-unit-sm"
-            >
-              <span className="text-label-mono text-secondary group-hover:text-secondary-fixed">
-                {row.code}
-              </span>
-              <span className="text-headline-sm flex-1 sm:px-unit-lg">{row.title}</span>
-              <span className="text-label-caps text-secondary group-hover:text-secondary-fixed">
-                {row.action} →
-              </span>
-            </Link>
+          {indexRows.map((row, i) => (
+            <Reveal key={row.code} delay={i * 70} as="div">
+              <Link
+                to={row.to}
+                className="index-row group flex flex-col sm:flex-row sm:items-center justify-between gap-unit-xs py-unit-lg border-b border-outline-variant hover:bg-primary hover:text-on-primary transition-arch px-unit-sm -mx-unit-sm"
+              >
+                <span className="text-label-mono text-secondary group-hover:text-secondary-fixed">
+                  {row.code}
+                </span>
+                <span className="text-headline-sm flex-1 sm:px-unit-lg">{row.title}</span>
+                <span className="text-label-caps text-secondary group-hover:text-secondary-fixed">
+                  {row.action} →
+                </span>
+              </Link>
+            </Reveal>
           ))}
         </div>
       </section>

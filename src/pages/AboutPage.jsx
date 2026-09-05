@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Reveal from '../components/Reveal'
 
 const competencies = [
   {
@@ -112,17 +113,18 @@ export default function AboutPage() {
     <div className="flex flex-col w-full">
       <section className="w-full page-gutter pt-unit-xl pb-unit-lg">
         <div className="flex flex-col gap-unit-xs">
-          <div className="flex flex-wrap items-center justify-between gap-unit-sm pb-unit-xs">
-            <span className="text-label-caps text-primary tracking-widest">
+          <div className="flex flex-wrap items-center justify-between gap-unit-sm pb-unit-xs rule-draw">
+            <span className="text-label-caps text-primary tracking-widest flex items-center gap-unit-xs">
+              <span className="inline-block w-2 h-2 bg-primary pulse-dot" />
               [章节 03 // 专业履历与个人档案]
             </span>
             <span className="text-label-mono text-secondary">
               信源：BCG 官网 // 公开演讲 2020—2025
             </span>
           </div>
-          <div className="w-full h-[4px] bg-primary" />
+          <div className="w-full h-[4px] bg-primary rule-draw" />
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-gutter-desktop pt-unit-md pb-unit-sm">
-            <div className="xl:col-span-8 flex flex-col justify-between">
+            <div className="xl:col-span-8 flex flex-col justify-between hero-stagger">
               <h1 className="font-display text-[52px] md:text-[84px] lg:text-[104px] leading-[0.95] tracking-[-0.035em] text-primary">
                 以确定性推动转型。
                 <span className="italic font-normal"> 何大勇。</span>
@@ -131,7 +133,7 @@ export default function AboutPage() {
                 董事总经理、全球资深合伙人 // BCG // 大中华区金融机构业务
               </p>
             </div>
-            <div className="xl:col-span-4 flex flex-col justify-between pt-unit-xs xl:pt-0">
+            <div className="xl:col-span-4 flex flex-col justify-between pt-unit-xs xl:pt-0 hero-stagger">
               <div className="flex flex-col gap-unit-2xs">
                 <span className="text-label-caps text-secondary">定位 / 分类</span>
                 <p className="text-body-base text-on-surface">
@@ -148,7 +150,7 @@ export default function AboutPage() {
                   href="https://www.bcg.com/about/people/experts/david-he"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-between bg-primary text-on-primary text-label-caps px-unit-md py-unit-sm hover:bg-surface hover:text-primary border border-primary transition-arch"
+                  className="w-full inline-flex items-center justify-between bg-primary text-on-primary text-label-caps px-unit-md py-unit-sm hover:bg-surface hover:text-primary border border-primary transition-arch lift-hover"
                 >
                   <span>[ 查看 BCG 专家页 → ]</span>
                   <span className="text-label-mono">BCG.COM</span>
@@ -162,7 +164,7 @@ export default function AboutPage() {
 
       <section className="w-full page-gutter py-unit-lg">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
-          <div className="lg:col-span-6 flex flex-col gap-unit-xl">
+          <Reveal className="lg:col-span-6 flex flex-col gap-unit-xl">
             <div className="flex items-center justify-between flex-wrap gap-unit-xs">
               <span className="text-label-caps text-primary tracking-widest">
                 [板块 03-A // 履历综述]
@@ -187,7 +189,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="w-full border border-primary p-unit-md bg-surface-container-low">
+            <div className="w-full border border-primary p-unit-md bg-surface-container-low lift-hover">
               <div className="flex items-center justify-between mb-unit-sm flex-wrap gap-unit-xs">
                 <span className="text-label-caps text-primary">教育与资质</span>
                 <span className="text-label-mono text-secondary">档案号 · DH-BCG</span>
@@ -237,9 +239,9 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-6 flex flex-col justify-between bg-surface-container-low p-unit-md md:p-unit-lg">
+          <Reveal delay={120} className="lg:col-span-6 flex flex-col justify-between bg-surface-container-low p-unit-md md:p-unit-lg">
             <div className="flex flex-col gap-unit-lg">
               <div className="flex items-center justify-between pb-unit-xs flex-wrap gap-unit-xs">
                 <span className="text-label-caps text-primary font-bold tracking-widest">
@@ -251,7 +253,7 @@ export default function AboutPage() {
               {chronology.map((item) => (
                 <div
                   key={item.period}
-                  className="p-unit-md bg-surface flex flex-col gap-unit-xs hover:bg-surface-container transition-arch"
+                  className="p-unit-md bg-surface flex flex-col gap-unit-xs hover:bg-surface-container transition-arch lift-hover"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-unit-xs">
                     <span className="text-label-mono text-primary font-bold">{item.period}</span>
@@ -281,25 +283,26 @@ export default function AboutPage() {
               <span>档案编号：2025-BCG-履历</span>
               <span>已对照公开信源核实</span>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="w-full bg-primary text-on-primary py-unit-2xl my-unit-lg">
         <div className="w-full page-gutter mx-auto flex flex-col gap-unit-xl">
-          <div className="flex flex-col gap-unit-xs">
+          <Reveal className="flex flex-col gap-unit-xs">
             <div className="flex flex-wrap items-center justify-between gap-unit-sm text-secondary-fixed-dim">
               <span className="text-label-caps tracking-widest">[板块 03-B // 公开观点]</span>
               <span className="text-label-mono">摘自演讲与研究报告</span>
             </div>
             <div className="w-full h-px bg-secondary" />
-          </div>
+          </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
-            {axioms.map((axiom) => (
-              <div
+            {axioms.map((axiom, i) => (
+              <Reveal
                 key={axiom.id}
-                className="flex flex-col justify-between p-unit-lg bg-white/10 min-h-[340px]"
+                delay={i * 90}
+                className="flex flex-col justify-between p-unit-lg bg-white/10 min-h-[340px] lift-hover"
               >
                 <div className="flex flex-col gap-unit-md">
                   <span className="text-label-mono text-secondary-fixed-dim">{axiom.id}</span>
@@ -308,11 +311,11 @@ export default function AboutPage() {
                   </blockquote>
                 </div>
                 <p className="text-body-sm text-secondary-fixed pt-unit-md">{axiom.body}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
 
-          <div className="p-unit-lg bg-white/5 flex flex-col md:flex-row items-start justify-between gap-unit-lg">
+          <Reveal delay={160} className="p-unit-lg bg-white/5 flex flex-col md:flex-row items-start justify-between gap-unit-lg">
             <div className="max-w-3xl flex flex-col gap-unit-xs">
               <span className="text-label-caps tracking-widest text-secondary-fixed">
                 研究与学术参与
@@ -327,13 +330,13 @@ export default function AboutPage() {
               <span>研究院：中国银行业</span>
               <span>授课：清华五道口</span>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="w-full page-gutter py-unit-xl">
         <div className="flex flex-col gap-unit-lg">
-          <div className="flex flex-col gap-unit-xs">
+          <Reveal className="flex flex-col gap-unit-xs">
             <div className="flex flex-wrap items-center justify-between gap-unit-sm">
               <span className="text-label-caps text-primary tracking-widest">
                 [精选著述与演讲 // 近五年]
@@ -341,14 +344,15 @@ export default function AboutPage() {
               <span className="text-label-mono text-secondary">档案登记 // 四个亮点</span>
             </div>
             <h2 className="text-headline-lg text-primary">研究亮点与公开议题</h2>
-            <div className="w-full h-[4px] bg-primary mt-unit-2xs" />
-          </div>
+            <div className="w-full h-[4px] bg-primary mt-unit-2xs rule-draw" />
+          </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter-desktop">
-            {papers.map((paper) => (
-              <div
+            {papers.map((paper, i) => (
+              <Reveal
                 key={paper.item}
-                className="flex flex-col justify-between p-unit-md bg-surface-container-low hover:bg-surface-container transition-arch min-h-[380px]"
+                delay={i * 70}
+                className="flex flex-col justify-between p-unit-md bg-surface-container-low hover:bg-surface-container transition-arch min-h-[380px] lift-hover"
               >
                 <div className="flex flex-col gap-unit-sm">
                   <div className="flex items-center justify-between">
@@ -367,11 +371,11 @@ export default function AboutPage() {
                     <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </span>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 
-          <div className="mt-unit-lg p-unit-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-unit-sm">
+          <Reveal delay={120} className="mt-unit-lg p-unit-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-unit-sm">
             <div className="flex items-center gap-unit-md">
               <span className="material-symbols-outlined text-primary text-[28px]">verified</span>
               <div className="flex flex-col">
@@ -383,11 +387,11 @@ export default function AboutPage() {
             </div>
             <Link
               to="/contact"
-              className="bg-primary text-on-primary text-label-caps px-unit-md py-unit-xs hover:bg-surface hover:text-primary border border-primary transition-arch"
+              className="bg-primary text-on-primary text-label-caps px-unit-md py-unit-xs hover:bg-surface hover:text-primary border border-primary transition-arch lift-hover"
             >
               [ 建立联络 ]
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
     </div>
